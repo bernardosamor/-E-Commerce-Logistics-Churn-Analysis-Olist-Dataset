@@ -20,9 +20,9 @@ No mapeamento de gatilhos de baixa *performance* da base de dados, foi reparado 
 ## 🧠 Hipóteses que guiaram o projeto
 
 * ** Status de vendas em que contrariavam o sucesso (canceladas, indisponível e afins), correspondem a um relevante faturamento não concretizado.
- * ** Resultado: ❌ Refutado** Faturamento referente a vendas canceladas e indisponíveis somadas chega a apenas 1,68% do faturamento total da empresa.
+   * ** Resultado: ❌ Refutado** Faturamento referente a vendas canceladas e indisponíveis somadas chega a apenas 1,68% do faturamento total da empresa.
 * ** Haveria formas de pagamento em que poderiam ocasionar gatilho de cancelamento pela necessidade de se realizar o processo manualmente (EX: boleto).
- * ** Resultado: ❌ Refutado** Boleto representa 19,9% das transações totais porém apenas 15,2% das transações com status cancelado. Por outro lado, o **voucher** representa 3,9% das transações totais e 15,04% das transações canceladas. 
+   * ** Resultado: ❌ Refutado** Boleto representa 19,9% das transações totais porém apenas 15,2% das transações com status cancelado. Por outro lado, o **voucher** representa 3,9% das transações totais e 15,04% das transações canceladas. 
 
 ## 📈 Impacto de Negócio
  **Insight Crítico:** O atraso na entrega do produto referente ao prazo pré-estabelecido é fatal para uma empresa de entregas, mostrando que 97,58% dos compradores optam por outros serviços após terem suas entregas atrasadas, causando um impacto financeiro muito significativo, e neste caso, colocando um montante retido em atrasos, de R$ 985,82 mil, em risco.
