@@ -15,7 +15,7 @@ O objetivo principal foi mapear **gargalos operacionais de logística**, mensura
 
 ## 💡 Problema de Negócio
 
-No mapeamento de gatilhos de baixa *perfomance* da base de dados, foi reparado um alto volume de avaliações nota 1. Estas avaliações foram ligadas a comentários de logística da empresa, principalmente de atraso nas entregas das mercadorias. Entregar com atraso causa prejuízos financeiros imediatos (como retenção de faturamento ou reembolsos). No entanto, o verdadeiro custo invisível de uma falha logística é a perda da recorrência de compra.
+No mapeamento de gatilhos de baixa *performance* da base de dados, foi reparado um alto volume de avaliações nota 1. Estas avaliações foram ligadas a comentários de logística da empresa, principalmente de atraso nas entregas das mercadorias. Entregar com atraso causa prejuízos financeiros imediatos (como retenção de faturamento ou reembolsos). No entanto, o verdadeiro custo invisível de uma falha logística é a perda da recorrência de compra.
 
 ## 🧠 Hipóteses que guiaram o projeto
 
