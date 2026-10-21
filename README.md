@@ -9,7 +9,7 @@
 
 Este projeto consiste em um **estudo de caso completo de Business Intelligence e Analytics** realizado sobre a base de dados pública do e-commerce Olist. 
 
-O objetivo principal foi mapear **gargalos operacionais de logística**, mensurar o impacto das entregas fora do prazo na satisfação do cliente (*NPS/Reviews*) e calcular a **destruição de Lifetime Value (LTV)** por meio do *Churn* definitivo de clientes impactados.
+O objetivo principal foi mapear **gargalos operacionais de logística**, mensurar o impacto das entregas fora do prazo na satisfação do cliente (*NPS/Reviews*) e mensurar se o cálculo afeta a recompra.
 
 ---
 
@@ -22,10 +22,12 @@ No mapeamento de gatilhos de baixa *performance* da base de dados, foi reparado 
 * ** Status de vendas em que contrariavam o sucesso (canceladas, indisponível e afins), correspondem a um relevante faturamento não concretizado.
    * ** Resultado: ❌ Refutado** Faturamento referente a vendas canceladas e indisponíveis somadas chega a apenas 1,68% do faturamento total da empresa.
 * ** Haveria formas de pagamento em que poderiam ocasionar gatilho de cancelamento pela necessidade de se realizar o processo manualmente (EX: boleto).
-   * ** Resultado: ❌ Refutado** Boleto representa 19,9% das transações totais porém apenas 15,2% das transações com status cancelado. Por outro lado, o **voucher** representa 3,9% das transações totais e 15,04% das transações canceladas. 
+   * ** Resultado: ❌ Refutado** Boleto representa 19,9% das transações totais porém apenas 15,2% das transações com status cancelado. Por outro lado, o **voucher** representa 3,9% das transações totais e 15,04% das transações canceladas.
+* ** Atrasos poderiam ser gatilhos de problemas de retenção de clientes
+   * ** Resultado: ❌ Refutado** Clientes com suas entregas após o prazo determinado pela empresa tem o churn apenas 0,5% maior que entregas no prazo (97% x 97,5%).
 
 ## 📈 Impacto de Negócio
- **Insight Crítico:** O atraso na entrega do produto referente ao prazo pré-estabelecido é fatal para uma empresa de entregas, mostrando que 97,58% dos compradores optam por outros serviços após terem suas entregas atrasadas, causando um impacto financeiro muito significativo, e neste caso, colocando um montante retido em atrasos, de R$ 985,82 mil, em risco.
+ **Insight Crítico:** o atraso na entrega é o principal fator de avaliações ruins. Pedidos atrasados têm nota média de 2,56 (46,4% de nota 1), contra 4,29 (6,6% de nota 1) dos entregues no prazo.
 
 ---
 
@@ -48,9 +50,8 @@ No mapeamento de gatilhos de baixa *performance* da base de dados, foi reparado 
 
 ## 💡 Principais Insights & Resultados
 
-* **🚚 Impacto do Frete na Satisfação:** Buscando entender a natureza da alta proporção de avaliações nota 1 se comparada as outras, tracei a causa até a logística da empresa. **25,04%** de todas as avaliações com Nota 1 na plataforma possuem relação direta com atrasos ou falhas logísticas (em comparação com apenas ~6% associadas a problemas de qualidade do produto).
+* **🚚 Impacto do Frete na Satisfação:** Buscando entender a natureza da alta proporção de avaliações nota 1 se comparada as outras, tracei a causa até a logística da empresa atrases de palavras chave como: **atraso, demora, não chegou, prazo, entrega**. Assim sendo, **25,04%** de todas as avaliações com Nota 1 na plataforma possuem relação direta com atrasos ou falhas logísticas (em comparação com apenas ~6% associadas a problemas de qualidade do produto).
 * **🚚 Discrepância de atraso entre estados da mesma região:** O alto volume de público consumidor ou, principalmente, a proximidade geográficas com HUBs de distribuição não garante pouco ou nenhum atraso. Enquanto estados distribuidores como MG e SP apresentam baixo índices percentuais de atraso, polos vizinhos e com muita demanda como o RJ, tem desempenho consideravelmente piores.
-* **📉 Destruição de LTV (Churn Imediato):** Ao analisar o histórico de recompra via SQL, identificou-se que **97,58% dos clientes afetados por entregas em atraso nunca mais voltaram a comprar** na plataforma (*Churn* definitivo).
 * **💰 Risco Financeiro:** Mais de **R$ 985 mil** em faturamento ficaram diretamente retidos em pedidos entregues após o prazo estipulado.
 
 ---
